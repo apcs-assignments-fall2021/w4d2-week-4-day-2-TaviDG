@@ -11,8 +11,11 @@ public class MyMain {
     //    int[] arr2 = {2, 4, 6};
     //    int[] arr3 = addArrays3(arr1, arr2); // arr3 = [3, 7, 11]
     public static int[] addArrays3(int[] arr1, int[] arr2) {
-        // REPLACE THIS WITH YOUR CODE
-        return null;
+        int [] arr3 = new int[3];
+        for (int i =0; i<3;i++){
+            arr3[i]+=(arr1[i]+arr2[i]);
+        }
+        return arr3;
     }
 
     // Arrays Basics Problem 2:
@@ -23,8 +26,11 @@ public class MyMain {
     // int[] arr1 = {1, 3, 5};
     // double[] arr2 = average3(arr1); // arr2 = [3.0, 3.0, 3.0]
     public static double[] average3(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return null;
+        double sum = 0;
+        for (int x:arr){
+            sum+=x;
+        }
+        return new double[]{sum/3,sum/3,sum/3};
     }
 
     // Iteration Problem 1:
@@ -34,8 +40,11 @@ public class MyMain {
     // int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
     // int x = sum(nums); // x = 40
     public static int sum(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return -1;
+        int sum = 0;
+        for (int x:arr){
+            sum+=x;
+        }
+        return sum;
     }
 
     // Iteration Problem 2:
@@ -45,8 +54,13 @@ public class MyMain {
     // int[] nums = {1, 6, 2, 6, 8, 2, 3, 9, 3};
     // int x = max(nums); // x = 9
     public static int max(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
-        return -1;
+        int max = arr[0];
+        for (int x: arr){
+            if (x>max){
+                max=x;
+            }
+        }
+        return max;
     }
 
     // Challenge Problem:
@@ -57,8 +71,11 @@ public class MyMain {
     // Example:
     // makeRandomArray(10, 1, 5) => [4, 2, 3, 1, 5, 3, 4, 4, 1, 2]
     public static int[] makeRandomArray(int size, int lowest, int biggest) {
-        // REPLACE THIS WITH YOUR CODE
-        return null;
+        int [] arr = new int[size];
+        for (int i = 0;i<arr.length;i++){
+            arr[i]= (int)((Math.random())*(biggest+1-lowest))+lowest;
+        }
+        return arr;
     }
 
 
